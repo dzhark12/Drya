@@ -16,15 +16,6 @@ Use the provided run script if present:
 ./run.sh
 ```
 
-Manual example (adjust to your toolchain and flags):
-
-```bash
-# Example, may require riscv64-unknown-elf-* toolchain
-riscv64-unknown-elf-gcc -nostdlib -march=rv64imac -mabi=lp64 -T kernel.ld -o kernel.elf *.c
-# convert to binary/bootable image as needed, then run in QEMU
-qemu-system-riscv64 -machine virt -nographic -bios none -kernel kernel.elf
-```
-
 ## Files
 
 - `kernel.c` — Kernel entry, BSS clear, SBI `sbi_call`, `putchar`, and `kernel_main` printing "Hello World".
