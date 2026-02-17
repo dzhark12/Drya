@@ -37,10 +37,6 @@ qemu-system-riscv64 -machine virt -nographic -bios none -kernel kernel.elf
 - A backup of the previous `kernel.c` was saved as `kernel.c.bak` during merging.
 - The code uses inline assembly for `ecall` and assumes an SBI implementation that services console output.
 
-## Contributing
-
-If you have references or a specific README text you'd like included, paste them and I'll add them into the "References" section.
-
 ## References
 https://operating-system-in-1000-lines.vercel.app/en/
 
